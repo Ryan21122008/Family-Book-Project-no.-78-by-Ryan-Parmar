@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> Family Book </title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">    
+</head> 
+<body>
+<h1> Family Book </h1>
+<div>
+<img src="Father.png" height="32%" width="15%" id="image"> 
+<h2 id="name"> Amit Singh </h2>
+<h2 id="relation"> Father </h2> 
+<button type="button" onclick="update();" height="100px" width="100px;"> Next </button> 
+<h2> Right-Click to go to Console Screen </h2> 
+</div>
+<style>
+body{
+    text-align:center;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color:dodgerblue;
+}
+#relation{
+    margin-top:-10px;
+    margin-bottom:30px;
+}
+button{
+   padding:10px;
+   width:80px; 
+   font-size:17px;
+}
+ </style> 
+
+<script>
+ console.log ("Amit Singh");
+ console.log ("Megha Singh");
+ console.log ("Nidhi Singh");
+ console.log ("Jaishri Singh");
+ console.log ("Tej Narain Singh");
+ console.log ("These are the names of all the family members");
+ var images = ["https://i.postimg.cc/0rRKLPGC/Father.png","https://i.postimg.cc/RhnnsNtF/Mother.png",
+"https://i.postimg.cc/SsPMfWJ3/Aunt.png", "https://i.postimg.cc/G3ZMcDqX/Grandmother.png", 
+"https://i.postimg.cc/HWJZDz4J/Grandfather.png"];
+var names = ["Amit Singh", "Megha Singh", "Nidhi Singh", "Jaishri Singh", "Tej Narain Singh"];
+var relation = ["Father", "Mother", "Aunt", "Grandmother", "Grandfather"];
+var i = 0;
+function update()
+{
+    i++;
+    var noofmembers = 5
+    if (i > noofmembers)
+    {
+        i = 0;
+    }
+    var updatedimg = images[i];
+    var updatednames = names[i];
+    var updatedrelation = relation[i];
+    document.getElementById("image").src = updatedimg;
+    document.getElementById("name").innerHTML = updatednames;
+    document.getElementById("relation").innerHTML = updatedrelation;
+}
+    </script>   
+</body>   
+</html>
